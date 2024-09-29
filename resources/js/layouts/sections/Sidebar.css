@@ -1,0 +1,45 @@
+.nav-item.active {
+  color: #058869;
+}
+.nav-item.active span{
+  color: #058869;
+}
+
+.nav-item {
+  color: #616e80;
+  line-height: 1.87;
+  white-space: nowrap;
+  display: block;
+  align-items: center;
+  margin: unset;
+  background-color: unset !important;
+  padding: 10px 17px 10px 5px;
+}
+
+.sidebar-menu a {
+  color: #616e80;
+}
+.sidebar-menu a.active {
+  color: #058869;
+}
+
+.sidebarToggleBtn {
+  position: fixed;
+  bottom: 10px;
+  left: 54px;
+  border: 1px solid #058869;
+  background-color: #058869;
+  border-radius: 15px;
+  height: 30px;
+  color: white !important;
+  width: 30px;
+  justify-content: center;
+  z-index: 3;
+  align-items: center;
+  padding: 0px 2px 0 0px;
+}
+
+body[dir="rtl"] .sidebarToggleBtn {
+  left: unset !important;
+  right: 54px;
+}
