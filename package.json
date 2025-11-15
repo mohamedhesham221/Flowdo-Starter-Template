@@ -4,11 +4,10 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build && vite build --ssr",
-        "translate": "php artisan zora:generate"
+        "translate": "php artisan zora:generate",
+        "test": "jest"
     },
     "dependencies": {
-        "ag-grid-community": "^32.0.2",
-        "ag-grid-react": "^32.0.2",
         "@ag-grid-community/client-side-row-model": "^32.1.0",
         "@ag-grid-community/core": "^32.1.0",
         "@ag-grid-community/locale": "^32.1.0",
@@ -98,6 +97,8 @@
         "@upstash/ratelimit": "^2.0.1",
         "@upstash/redis": "^1.34.0",
         "@vitejs/plugin-react": "^4.3.1",
+        "ag-grid-community": "^32.0.2",
+        "ag-grid-react": "^32.0.2",
         "autoprefixer": "^10.4.19",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.1",
@@ -131,17 +132,24 @@
         "@headlessui/react": "^1.4.2",
         "@inertiajs/react": "^1.0.0",
         "@tailwindcss/forms": "^0.5.3",
+        "@testing-library/jest-dom": "^6.9.1",
+        "@testing-library/react": "^16.3.0",
+        "@testing-library/user-event": "^14.6.1",
+        "@types/jest": "^30.0.0",
         "@types/node": "^18.13.0",
         "@types/react": "^18.0.28",
         "@types/react-dom": "^18.0.10",
         "@vitejs/plugin-react": "^4.2.0",
         "autoprefixer": "^10.4.12",
         "axios": "^1.6.4",
+        "jest": "^30.2.0",
+        "jest-environment-jsdom": "^30.2.0",
         "laravel-vite-plugin": "^1.0.0",
         "postcss": "^8.4.31",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "tailwindcss": "^3.2.1",
+        "ts-jest": "^29.4.5",
         "typescript": "^5.0.2",
         "vite": "^5.0.0"
     }
