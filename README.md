@@ -21,6 +21,16 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Screenshots
+
+### Ticket Page
+
+![Ticket Page](./resources/js/assets/ticket.png)
+
+## Notes
+
+Cloned from Figma design file by [figma file](https://www.figma.com/design/on2zRep5FcEAZwnI9fVe2b/%D8%B4%D8%A7%D8%B4%D8%A7%D8%AA-%D8%A7%D9%84%D8%B7%D9%84%D8%A8%D8%A7%D8%AA?node-id=0-1&p=f&t=CV32oL5tkAWHGxtC-0)
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
