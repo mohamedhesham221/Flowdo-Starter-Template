@@ -21,6 +21,195 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your system:
+
+- **PHP** >= 8.1
+- **Composer** (latest version)
+- **Node.js** >= 16.x and **npm** >= 8.x
+- **MySQL** >= 5.7 or **PostgreSQL** >= 10 or **SQLite** >= 3.8
+- **Git**
+
+### Optional but Recommended
+
+- **Redis** (for caching and queue management)
+- **Docker** (for containerized development)
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd <project-directory>
+```
+
+### 2. Install PHP Dependencies
+
+```bash
+composer install
+```
+
+### 3. Install JavaScript Dependencies
+
+```bash
+npm install
+```
+
+### 4. Environment Configuration
+
+Copy the example environment file and generate an application key:
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+### 5. Configure Your Database
+
+Open the `.env` file and update the database credentials:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_user
+DB_PASSWORD=your_database_password
+```
+
+### 6. Run Database Migrations
+
+```bash
+php artisan migrate
+```
+
+If you want to seed the database with sample data:
+
+```bash
+php artisan db:seed
+```
+
+Or run both migration and seeding together:
+
+```bash
+php artisan migrate --seed
+```
+
+### 7. Build Frontend Assets
+
+For development:
+```bash
+npm run dev
+```
+
+For production:
+```bash
+npm run build
+```
+
+### 8. Start the Development Server
+
+```bash
+php artisan serve
+```
+
+The application will be available at `http://localhost:8000`
+
+## Additional Configuration
+
+### Storage Link
+
+Create a symbolic link from `public/storage` to `storage/app/public`:
+
+```bash
+php artisan storage:link
+```
+
+### Queue Workers (Optional)
+
+If your application uses queues, run the queue worker:
+
+```bash
+php artisan queue:work
+```
+
+### Task Scheduling (Optional)
+
+If you're using Laravel's task scheduler, add this cron entry:
+
+```bash
+* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
+```
+
+## Running Tests
+
+Run the test suite:
+
+```bash
+php artisan test
+```
+
+Or using PHPUnit directly:
+
+```bash
+./vendor/bin/phpunit
+```
+
+## Docker Setup (Alternative)
+
+If you prefer using Docker, you can use Laravel Sail:
+
+```bash
+./vendor/bin/sail up
+```
+
+For first-time setup with Sail:
+
+```bash
+./vendor/bin/sail artisan migrate
+./vendor/bin/sail npm install
+./vendor/bin/sail npm run dev
+```
+
+## Common Issues & Troubleshooting
+
+### Permission Issues
+
+If you encounter permission errors, set proper permissions:
+
+```bash
+chmod -R 775 storage bootstrap/cache
+chown -R www-data:www-data storage bootstrap/cache
+```
+
+### Clear Cache
+
+If you experience unexpected behavior, try clearing the cache:
+
+```bash
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+```
+
+## Project Structure
+
+```
+├── app/                # Application core code
+├── bootstrap/          # Application bootstrapping
+├── config/             # Configuration files
+├── database/           # Migrations, factories, and seeds
+├── public/             # Public assets
+├── resources/          # Views, CSS, and JavaScript
+├── routes/             # Route definitions
+├── storage/            # File storage
+├── tests/              # Test files
+└── vendor/             # Composer dependencies
+```
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
